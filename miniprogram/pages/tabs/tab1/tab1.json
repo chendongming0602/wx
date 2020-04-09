@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "scroll": "/components/scroll/scroll",
+    "pickers": "/components/pickers/pickers"
+  }
+}

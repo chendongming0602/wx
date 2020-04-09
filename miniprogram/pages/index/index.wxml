@@ -1,0 +1,21 @@
+<view hidden="{{tabCount!==0}}">
+  <view wx:if="{{tabIf[0]}}" >
+    <tab1 id="tab1" isDatas="{{isDatas}}" userList="{{userList}}"></tab1>
+  </view>
+</view>
+<view hidden="{{tabCount!==1}}">
+  <view wx:if="{{tabIf[1]}}" >
+    <tab2 id="tab2" isDatas="{{isDatas}}" userList="{{userList}}"></tab2>
+  </view>
+</view>
+<view hidden="{{tabCount!==2}}">
+  <view wx:if="{{tabIf[2]}}" >
+    <tab3 id="tab3" isDatas="{{isDatas}}" userList="{{userList}}"></tab3>
+  </view>
+</view>
+<view hidden="{{tabCount!==3}}">
+  <view wx:if="{{tabIf[3]}}" >
+    <tab4 id="tab4" isDatas="{{isDatas}}" userList="{{userList}}"></tab4>
+  </view>
+</view>
+<tab tabCount="{{tabCount}}" bind:tabIdex="tabIdex" id="icons"></tab>

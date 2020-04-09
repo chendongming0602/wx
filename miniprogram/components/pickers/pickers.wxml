@@ -1,0 +1,19 @@
+<picker
+class="address-picker"
+mode="multiSelector"
+range="{{[province, city, area]}}"
+value="{{value}}"
+bindchange="changeHandler"
+bindcolumnchange="columnchange">
+  <!-- <view class="hot-area"></view> -->
+  <slot></slot>
+</picker>
+
+<!-- 使用方法 -->
+<!-- default-address:默认的选择（一个数组，地区名）
+<pickers bind:address="fromHandler" default-address="{{[]}}">
+  <view class="ys1-picker">
+    <view>{{dwellValue||'请选择你的居住'}}</view>
+    <image src="http://minis-resources-1252149780.cosgz.myqcloud.com/lovers_magpie%20/user_bar_more_icon.png"></image>
+  </view>
+</pickers> -->

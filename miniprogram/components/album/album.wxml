@@ -1,0 +1,12 @@
+<!-- 直接调用选择照片 -->
+<view catchtap="oneAlbum">
+</view>
+<canvas canvas-id="compress" class="canvas" style="height:{{canvasHeight}}px;"></canvas>
+<!-- 选择框 -->
+<view class="allAlbum" wx:if="{{isAllAlbum}}">
+  <view class="allBox">
+    <view class="camera" catchtap="cameraHandler">相机</view>
+    <view class="seAlbum" catchtap="albumHandler">从相册选择</view> 
+    <view class="cancel" catchtap="closeIsAllAlbum">取消</view> 
+  </view>
+</view>

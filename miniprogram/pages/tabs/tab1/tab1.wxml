@@ -1,0 +1,19 @@
+<scroll
+  class="scroll-box"
+  bind:pulldown="onPullDown"
+  bind:reachbottom="onReachBottom"
+>
+  <view class="pulldown-loadng" slot="pulldown-loading-ele">
+    <view class="loading-icon-text">
+      <image wx:for="{{3}}" wx:key="index" class="loadingImg"  src="https://lovers-1300783623.cos.ap-shanghai.myqcloud.com/web/refresh/refresh.png"></image>
+      <!-- ta正在赶来... -->
+    </view>
+  </view>
+  <view slot="main">
+    是我啊
+  </view>
+  <!-- tab空位 -->
+  <view slot="empty">
+    <view class="empty"></view>
+  </view>
+</scroll>

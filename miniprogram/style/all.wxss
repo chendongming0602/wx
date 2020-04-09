@@ -1,0 +1,51 @@
+/* *************************刷新动画************** */
+.scroll-box {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.pulldown-loadng {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:var(--color);
+}
+
+.loading-icon {
+  width: 200rpx;
+  height: 200rpx;
+}
+.loading-icon-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  color: #fff;
+  width: 100%;
+  font-weight: bold;
+  height: 140rpx;
+}
+.loading-icon-text image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+@keyframes loadingImg{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.loadingImg{
+  animation: loadingImg .8s linear infinite;
+}
+.empty{
+  width: 100%;
+  height: 96rpx;
+  background: transparent;
+}

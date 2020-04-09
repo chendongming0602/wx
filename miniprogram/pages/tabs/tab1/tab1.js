@@ -1,0 +1,26 @@
+// pages/tabs/tab1/tab1.js
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    onPullDown(e){
+      let { stop } = e.detail;
+      setTimeout(() => { stop()},500)
+    },
+  }
+})

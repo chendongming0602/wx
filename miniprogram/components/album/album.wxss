@@ -1,0 +1,40 @@
+.canvas {
+  width: 750px;
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+}
+.allAlbum{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(1,1,1,0.5);
+  z-index: 80;
+}
+.allBox{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  height:430rpx;
+  border-radius:44rpx 44rpx 0px 0px;
+  color: #333;
+  text-align: center;
+}
+.allBox view{
+  font-size: 50rpx;
+}
+.camera{
+  padding: 30rpx 0;
+  border-bottom: 1px solid var(--border);
+}
+.seAlbum{
+  padding: 30rpx 0;
+  border-bottom: 20rpx solid #F8F8F8;
+}
+.cancel{
+  padding-top: 40rpx;
+}
