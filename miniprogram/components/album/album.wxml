@@ -3,7 +3,7 @@
 </view>
 <canvas canvas-id="compress" class="canvas" style="height:{{canvasHeight}}px;"></canvas>
 <!-- 选择框 -->
-<view class="allAlbum" wx:if="{{isAllAlbum}}">
+<view class="allAlbum" wx:if="{{isShow}}">
   <view class="allBox">
     <view class="camera" catchtap="cameraHandler">相机</view>
     <view class="seAlbum" catchtap="albumHandler">从相册选择</view> 
