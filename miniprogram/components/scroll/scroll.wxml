@@ -21,3 +21,33 @@
   <view id="bottom"></view>
 </scroll-view>
 
+
+<!-- 使用方法
+<scroll
+  class="scroll-box"
+  bind:pulldown="onPullDown"
+  bind:reachbottom="onReachBottom"
+>
+  <view class="pulldown-loadng" slot="pulldown-loading-ele">
+    下拉文案
+  </view>
+
+  <view slot="main">
+    正常内容
+  </view>
+
+  <view slot="empty">
+    底部预留多高空位
+    <view class="empty" style="height:96rpx"></view>
+  </view>
+</scroll>
+
+事件
+onPullDown(e){
+  let { stop } = e.detail;
+  setTimeout(() => { stop()},500)
+},
+onReachBottom(e){
+  let { stop } = e.detail;
+  setTimeout(() => { stop()},500)
+}, -->

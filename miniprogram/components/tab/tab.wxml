@@ -6,3 +6,7 @@
   </view>
 </view>
 
+<!-- 使用
+tabCount：目前选择的下标
+tabIdex：选择后触发的事件
+<tab tabCount="{{tabCount}}" bind:tabIdex="tabIdex" id="icons"></tab> -->

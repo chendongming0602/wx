@@ -10,3 +10,7 @@
     <view class="cancel" catchtap="closeIsAllAlbum">取消</view> 
   </view>
 </view>
+
+<!-- 使用 -->
+<!-- 1.父组件调用子组件事件isShowEvent 并传需要上传图片数量{count:1}
+2.选择完成后会触发父组件albumEvent 事件将地址带回去 -->

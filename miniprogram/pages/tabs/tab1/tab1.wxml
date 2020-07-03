@@ -10,7 +10,7 @@
     </view>
   </view>
   <view slot="main">
-    是我啊
+    1
   </view>
   <!-- tab空位 -->
   <view slot="empty">
