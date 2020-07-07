@@ -1,0 +1,48 @@
+<view class="navBg" style="height:{{CustomBar}}px">
+  <view style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px" class="contentFixed" >
+    <!-- 首页 -->
+    <view  class="jianLeft">
+      <view class="myIndex" catchtap="myIndex">
+        <image src="https://minis-resources-1252149780.cos.ap-guangzhou.myqcloud.com/album/index/myIndex.png"></image>
+        我的
+      </view>
+
+    </view>
+    <view class="jianLeft" hidden="true">
+      <image src="http://minis-resources-1252149780.cosgz.myqcloud.com/lovers_magpie%20/user_bar_more_icon.png"></image>
+      返回
+    </view>
+    <view class="navTitle" style="top:{{StatusBar}}px" hidden="true">是首页啊</view>
+  </view>
+</view>
+
+<!-- 使用
+  引入页面即可
+  注意兼容屏幕
+  app.js需要添加参数：
+
+  nav: {//自定义导航
+    Custom:{},
+    CustomBar:64,
+    StatusBar:20
+  },
+
+  添加事件
+  navEvent(){
+    wx.getSystemInfo({//自定义导航
+      success: e => {
+        this.nav.StatusBar = e.statusBarHeight;
+        let capsule = wx.getMenuButtonBoundingClientRect();
+        if (capsule) {
+          this.nav.Custom = capsule;
+          this.nav.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;//整体高度
+        } else {
+          this.nav.CustomBar = e.statusBarHeight + 50;//整体高度
+        };
+        // console.log(this.nav)
+      }
+    })
+  },
+  在app.js生命周期触发事件即可
+
+ -->

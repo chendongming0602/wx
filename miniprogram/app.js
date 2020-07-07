@@ -7,8 +7,29 @@ try {
   });
 } catch (err) { }
 App({
+  nav: {//自定义导航
+    Custom:{},
+    CustomBar:64,
+    StatusBar:20
+  },
   onLaunch: function () {
+    this.navEvent();//自定义导航栏的数据
     // this.loginEvent();
+  },
+  navEvent(){
+    wx.getSystemInfo({//自定义导航
+      success: e => {
+        this.nav.StatusBar = e.statusBarHeight;
+        let capsule = wx.getMenuButtonBoundingClientRect();
+        if (capsule) {
+          this.nav.Custom = capsule;
+          this.nav.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;//整体高度
+        } else {
+          this.nav.CustomBar = e.statusBarHeight + 50;//整体高度
+        };
+        // console.log(this.nav)
+      }
+    })
   },
   loginEvent(){//登录请求不走封装（以防登录失效重新登录继续之前的请求）
     return new Promise((resolve,reject)=>{
