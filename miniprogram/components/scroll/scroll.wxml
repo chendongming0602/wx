@@ -29,16 +29,17 @@
   bind:reachbottom="onReachBottom"
 >
   <view class="pulldown-loadng" slot="pulldown-loading-ele">
-    下拉文案
+    <view style="display: flex;justify-content: center;align-items:center;width:100%;height:140rpx;background:#ddd;">
+        下拉文案
+    </view>
   </view>
 
   <view slot="main">
     正常内容
   </view>
 
-  <view slot="empty">
-    底部预留多高空位
-    <view class="empty" style="height:96rpx"></view>
+  <view slot="empty" style="height:96rpx">
+    底部预留多高空位X
   </view>
 </scroll>
 
@@ -47,7 +48,10 @@ onPullDown(e){
   let { stop } = e.detail;
   setTimeout(() => { stop()},500)
 },
+
 onReachBottom(e){
   let { stop } = e.detail;
   setTimeout(() => { stop()},500)
-}, -->
+}, 
+提示：onReachBottom事件在页面上只能出现一个，有时会和官方的冲突，请删掉一个
+-->

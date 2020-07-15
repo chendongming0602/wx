@@ -4,9 +4,8 @@
   bind:reachbottom="onReachBottom"
 >
   <view class="pulldown-loadng" slot="pulldown-loading-ele">
-    <view class="loading-icon-text">
-      <image wx:for="{{3}}" wx:key="index" class="loadingImg"  src="https://lovers-1300783623.cos.ap-shanghai.myqcloud.com/web/refresh/refresh.png"></image>
-      <!-- ta正在赶来... -->
+    <view style="display: flex;justify-content: center;align-items:center;width:100%;height:140rpx;background:#ddd;">
+        我来了
     </view>
   </view>
   <view slot="main">

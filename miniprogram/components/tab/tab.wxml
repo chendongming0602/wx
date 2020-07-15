@@ -6,7 +6,51 @@
   </view>
 </view>
 
-<!-- 使用
+<!-- 使用（目前展示的是第一套，需要通过判断组件实现）
 tabCount：目前选择的下标
 tabIdex：选择后触发的事件
 <tab tabCount="{{tabCount}}" bind:tabIdex="tabIdex" id="icons"></tab> -->
+
+
+
+
+<!-- 第二套 (建议使用，直接跳转页面，不需要判断组件)
+  根据跳转官方Tab实现
+  app.json需要设置官方tab，然后通过tab跳转跳到对应tab
+  "tabBar": {
+    "color": "white",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/tabs/index/index",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/tabs/live/live",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/tabs/add/add",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/tabs/info/info",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/tabs/my/my",
+        "text": ""
+      }
+    ]
+  }
+-->
+
+<!-- <view class="tabBox">
+  <navigator url="{{item.pages}}" open-type="switchTab" class="tabList {{tabCount!==index?'tabListColor':''}}" wx:for="{{list}}" wx:key="index" catchtap="tabEvent" data-index="{{index}}">
+    <image class="tabImg" src="{{item.urlNo}}" hidden="{{tabCount==index}}"></image>
+    <image class="tabImg show" src="{{item.url}}" hidden="{{tabCount!==index}}"></image>
+    {{item.name}}
+  </navigator>
+</view> -->
