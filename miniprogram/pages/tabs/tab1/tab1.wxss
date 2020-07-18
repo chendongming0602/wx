@@ -1,6 +1,0 @@
-@import "/style/all.wxss";
-/* view{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */

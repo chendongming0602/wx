@@ -120,7 +120,7 @@ Component({
         console.log("走了定时")
       }, 5000);
       try {
-        await Promise.all(arr.map(t => { return gf.isAlbum(t) }));
+        await Promise.all(arr.map(t => { return gf.isAlbumGF(t) }));
       } catch (err) {
         clearTimeout(time3)
         if (this._ups) return this._ups = false;
