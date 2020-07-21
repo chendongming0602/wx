@@ -58,12 +58,6 @@ function isAlbumGF(url) {//进行检验
         if (res.result.errCode != 87014) {
           resolve(true)
         } else {
-          // wx.hideLoading();
-          // wx.showModal({
-          //   title: '提示',
-          //   content: '微信审核不通过，请更换照片!',
-          //   showCancel:false
-          // })
           reject(res)
         }
       }).catch(reject);
@@ -73,5 +67,5 @@ function isAlbumGF(url) {//进行检验
 }
 export default {
   isText,
-  isAlbumGF
+  isAlbum
 }
