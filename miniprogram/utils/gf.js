@@ -38,7 +38,7 @@ function funA(url) {//转为本地路径
   })
 
 }
-function isAlbumGF(url) {//进行检验
+function isAlbum(url) {//进行检验
   //return Promise.resolve(true);//关闭图片审核
   wx.showLoading({
     title: '微信审核中...',
