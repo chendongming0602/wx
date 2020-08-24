@@ -1,5 +1,10 @@
 // components/nav/nav.js
-const APP=getApp();
+const APP=getApp(),
+att=function(){
+  APP.navEvent().then(nav=>{
+    this.setData(nav)
+  })
+};
 Component({
   /**
    * 组件的属性列表
@@ -12,11 +17,12 @@ Component({
    * 组件的初始数据
    */
   data: {
-    StatusBar: APP.nav.StatusBar,
-    CustomBar: APP.nav.CustomBar,
-    Custom: APP.nav.Custom
+   
   },
-
+  lifetimes: {
+    attached: att,
+  },
+  attached: att,
   /**
    * 组件的方法列表
    */

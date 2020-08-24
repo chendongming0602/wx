@@ -44,13 +44,14 @@
 }
 
 .myIndex{
-  width: 174rpx;
+  /* width: 174rpx; */
   height: 62rpx;
   background: rgba(1,1,1,0.2);
   border-radius: 32rpx;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20rpx;
   color: #fff;
 }
 .myIndex image{

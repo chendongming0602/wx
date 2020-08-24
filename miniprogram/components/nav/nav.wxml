@@ -4,15 +4,10 @@
     <view  class="jianLeft">
       <view class="myIndex" catchtap="myIndex">
         <image src="https://minis-resources-1252149780.cos.ap-guangzhou.myqcloud.com/album/index/myIndex.png"></image>
-        我的
+        我是自定义的顶部
       </view>
 
     </view>
-    <view class="jianLeft" hidden="true">
-      <image src="http://minis-resources-1252149780.cosgz.myqcloud.com/lovers_magpie%20/user_bar_more_icon.png"></image>
-      返回
-    </view>
-    <view class="navTitle" style="top:{{StatusBar}}px" hidden="true">是首页啊</view>
   </view>
 </view>
 
@@ -29,20 +24,24 @@
 
   添加事件
   navEvent(){
-    wx.getSystemInfo({//自定义导航
-      success: e => {
-        this.nav.StatusBar = e.statusBarHeight;
-        let capsule = wx.getMenuButtonBoundingClientRect();
-        if (capsule) {
-          this.nav.Custom = capsule;
-          this.nav.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;//整体高度
-        } else {
-          this.nav.CustomBar = e.statusBarHeight + 50;//整体高度
-        };
-        // console.log(this.nav)
-      }
-    })
+    return new Promise((resolve,reject)=>{
+      if(this.nav.is) return resolve(this.nav);
+      wx.getSystemInfo({//自定义导航
+        success: e => {
+          this.nav.StatusBar = e.statusBarHeight;
+          let capsule = wx.getMenuButtonBoundingClientRect();
+          if (capsule) {
+            this.nav.Custom = capsule;
+            this.nav.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;//整体高度
+          } else {
+            this.nav.CustomBar = e.statusBarHeight + 50;//整体高度
+          };
+          this.nav.is=true;
+          resolve(this.nav)
+          // console.log(this.nav)
+        }
+      });
+    });
   },
-  在app.js生命周期触发事件即可
 
  -->
