@@ -1,0 +1,17 @@
+<view class="{{direction==='center'?'box':''}}">
+    <view class="product-window {{open ? 'on' : ''}} {{direction}}" style="width:{{width}}%;" >
+
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/index/close.png"  class="iconfont" wx:if="{{is_close}}" catchtap="close"></image>
+        <slot></slot>
+    </view>
+    <view class="mask" catch:touchmove catchtap="close" wx:if="{{is_mask&&open}}"></view>
+</view>
+
+<!-- 
+
+    通过 this.selectComponent("#pop").show();开启
+    direction:方向（below;up;left;right）
+    width:显示内容宽度
+    is_close：是否显示关闭按钮
+    is_mask：是否显示遮罩层
+ -->
