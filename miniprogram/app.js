@@ -21,6 +21,8 @@ App({
       if(this.nav.is) return resolve(this.nav);
       wx.getSystemInfo({//自定义导航
         success: e => {
+          // 是否为iPhoneX
+          // -1 < e.model.indexOf("iPhone X") && (this.isX = !0);
           this.nav.StatusBar = e.statusBarHeight;
           let capsule = wx.getMenuButtonBoundingClientRect();
           if (capsule) {
