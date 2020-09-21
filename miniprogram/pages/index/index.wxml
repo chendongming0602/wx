@@ -18,4 +18,4 @@
     <tab4 id="tab4" isDatas="{{isDatas}}" userList="{{userList}}"></tab4>
   </view>
 </view>
-<tab tabCount="{{tabCount}}" bind:tabIdex="tabIdex" id="icons"></tab>
+<!-- <tab tabCount="{{tabCount}}" bind:tabIdex="tabIdex" id="icons"></tab> -->

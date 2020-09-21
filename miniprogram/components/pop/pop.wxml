@@ -9,7 +9,8 @@
 
 <!-- 
 
-    通过 this.selectComponent("#pop").show();开启
+    通过 父组件wx:if进行控制，开启
+    请bind:close="close" 事件，子组件点击遮罩或者关闭按钮进行调用父关闭！
     direction:方向（below;up;left;right）
     width:显示内容宽度
     is_close：是否显示关闭按钮
